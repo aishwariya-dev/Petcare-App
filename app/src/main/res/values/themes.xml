@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Window-level theme only. All in-app theming is done in Compose (ui/theme/Theme.kt). -->
+    <style name="Theme.PetCare" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/brand_surface</item>
+    </style>
+
+    <!-- Launch theme: the system splash shows the icon while the session is
+         restored, then hands over to Theme.PetCare (see MainActivity). -->
+    <style name="Theme.PetCare.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/brand_surface</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.PetCare</item>
+    </style>
+</resources>
